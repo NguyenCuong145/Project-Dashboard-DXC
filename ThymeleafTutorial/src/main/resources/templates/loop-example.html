@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Loop</title>
+<style type="text/css">
+	table th, table td{
+		padding: 5px;
+	}
+</style>
+</head>
+<body>
+	<h1>th:each</h1>
+	<table border="1">
+		<tr>
+			<th>index</th>
+			<th>count</th>
+			<th>size</th>
+			<th>even</th>
+			<th>odd</th>
+			<th>first</th>
+			<th>last</th>
+			<th>Flower Name</th>
+		</tr>
+		<tr th:each="flower, state:${flowers}">
+			<th th:utext="${state.index}">index</th>
+			<th th:utext="${state.count}">count</th>
+			<th th:utext="${state.size}">size</th>
+			<th th:utext="${state.even}">even</th>
+			<th th:utext="${state.odd}">odd</th>
+			<th th:utext="${state.first}">first</th>
+			<th th:utext="${state.last}">last</th>
+			<th th:utext="${flower}">Flower Name</th>
+		</tr>
+	</table>
+
+</body>
+</html>

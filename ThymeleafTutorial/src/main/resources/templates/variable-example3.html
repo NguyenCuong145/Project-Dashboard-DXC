@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Variable</title>
+</head>
+<body>
+	<h1>th: with</h1>
+	
+	<!-- Local variable: flower0 -->
+	<div th:with="flower0 = ${flowers[0]}">
+		<h4>${flower0}</h4>
+		<span th:utext="${flower0}"></span>
+	</div>
+	
+	<!-- Local variable: flower1, flower2 -->
+	<div th:with="flower1 = ${flowers[1]}, flower2 = ${flowers[2]}">
+		<h4>${flower1}, ${flower2}</h4>
+		<span th:utext="${flower1}"></span>
+		<br>
+		<span th:utext="${flower2}"></span>
+	</div>
+	<hr>
+	
+	<!-- Local variable: firstName, lastName, fullName -->
+	<div th:with="firstName = 'James', lastName = 'Smith', fullName = ${firstName} + ' ' + ${lastName}">
+		First Name: <span th:utext="${firstName}"></span>
+		<br>
+		Last Name: <span th:utext="${lastName}"></span>
+		<br>
+		Full Name: <span th:utext="${fullName}"></span>
+	</div>
+
+</body>
+</html>
